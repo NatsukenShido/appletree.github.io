@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Project Apple Tree</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    .scroll-animate {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+
+    .scroll-animate.visible {
+      opacity: 1;
+      transform: none;
+    }
+  </style>
+</head>
+
+<body class="bg-green-900 text-white font-sans">
+  <!-- Header -->
+  <header class="bg-green-800 p-4 fixed w-full z-10 shadow-md">
+    <nav class="flex justify-between items-center">
+      <div class="text-lg font-bold">Project: Apple Tree</div>
+      <ul class="flex space-x-6">
+        <li><a href="#home" class="hover:underline">Home</a></li>
+        <li><a href="#introduction" class="hover:underline">Introduction</a></li>
+        <li><a href="#trust" class="hover:underline">Why Should You Trust Us</a></li>
+        <li><a href="send-funds.html" class="hover:underline">Fundraiser</a></li>
+        <li><a href="drop-off.html" class="hover:underline">Donation Drop-Off Locations</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Cover Page -->
+  <section id="home" class="h-screen flex flex-col items-center justify-center bg-green-700 text-center px-4">
+    <h1 class="text-4xl md:text-6xl font-bold mb-4 text-white">We are <i>"Project: Apple Tree"</i></h1>
+    <p class="text-lg md:text-2xl mb-6 text-white">Support Our School Fundraiser! | Help make a difference in education.</p>
+    <div class="space-x-4">
+      <a href="send-funds.html" class="bg-yellow-500 text-white px-6 py-3 rounded font-bold hover:bg-yellow-500">Send Fund Here</a>
+      <a href="drop-off.html" class="bg-blue-400 text-white px-6 py-3 rounded font-bold hover:bg-blue-500">See Drop-Off Locations</a>
+    </div>
+  </section>
+
+  <section id="introduction" class="min-h-screen bg-green-800 grid grid-cols-1 md:grid-cols-2 items-center p-12">
+    <div class="text-left space-y-6">
+      <h2 class="text-4xl font-bold text-chalkboard-green">Introduction</h2>
+      <p class="text-lg text-white max-w-prose">
+        Our mission is to bring the community together in support of quality education through donations and fundraising. Every contribution makes a meaningful impact in the lives of students.
+      </p>
+    </div>
+    <div class="flex justify-center">
+      <img src="retriever.jpg" alt="Introduction Visual" class="max-w-full h-auto rounded shadow-lg">
+    </div>
+  </section>
+
+  <section id="trust" class="min-h-screen bg-green-900 grid grid-cols-1 md:grid-cols-2 items-center p-12">
+    <div class="flex justify-center order-2 md:order-1">
+      <img src="dalmatian.jpg" alt="Trust Visual" class="max-w-full h-auto rounded shadow-lg">
+    </div>
+    <div class="text-right space-y-6 order-1 md:order-2">
+      <h2 class="text-4xl font-bold text-chalkboard-green">Why Should You Trust Us?</h2>
+      <p class="text-lg text-white max-w-prose ml-auto">
+        With years of experience in organizing transparent and effective donation drives, we ensure that every peso reaches the right hands. Our team is composed of trusted educators, students, and volunteers dedicated to making a difference.
+      </p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-green-600 text-center p-4 mt-8">
+    <p>Contact us at: <a href="mrs.gapple727@appletree.com" class="underline">mrs.gapple727@appletree.com</a></p>
+    <p>&copy; 2025 School Fundraiser</p>
+    <p>Made with <span class="text-red-500">&lt;3</span> by Ivan, Queen and Nikki</p>
+  </footer>
+
+  <script>
+    const scrollElements = document.querySelectorAll('.scroll-animate');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    scrollElements.forEach(el => observer.observe(el));
+  </script>
+</body>
+
+</html>
