@@ -9,30 +9,44 @@
 
 <body class="bg-green-900 text-black font-sans">
   <!-- Header -->
-  <header class="bg-green-900 text-white p-4 fixed w-full z-10 shadow-md">
+  <header class="bg-green-900 text-white font-sans p-4 fixed w-full z-10 shadow-md">
     <nav class="flex justify-between items-center">
-      <div><a href="index.html#home" class="text-lg font-bold">Project Apple Tree</div>
+      <div><a href="index.html#home" class="text-lg font-bold">Project: Apple Tree</a></div>
       <ul class="flex space-x-6">
-        <li><a href="index.html" class="hover:underline">Home</a></li>
-        <li><a href="index.html#introduction" class="hover:underline">Introduction</a></li>
-        <li><a href="index.html#trust" class="hover:underline">Why Should You Trust Us</a></li>
+        <li><a href="index.html#home" class="hover:underline">Home</a></li>
+        <li><a href="#introduction" class="hover:underline">Introduction</a></li>
+        <li><a href="#trust" class="hover:underline">Why Should You Trust Us</a></li>
         <li><a href="send-funds.html" class="hover:underline">Fundraiser</a></li>
         <li><a href="drop-off.html" class="hover:underline">Donation Drop-Off Locations</a></li>
       </ul>
     </nav>
   </header>
 
-  <main class="min-h-screen flex flex-col items-center justify-center p-6">
-    <div class="w-full max-w-md bg-white p-6 rounded-xl shadow-lg">
-      <h2 class="text-2xl font-semibold text-center mb-4">Help us with our Fundraiser</h2>
+  <main class="min-h-screen flex flex-col items-center justify-start pt-32 p-10 bg-green-800">
+    <div class="w-full max-w-md bg-white p-10 rounded-xl shadow-lg">
+      <h2 class="text-2xl font-semibold text-center mb-4">Send Funds Here!</h2>
       <form action="https://formspree.io/f/your-form-id" method="POST" class="space-y-4">
         <div>
-          <label class="block text-sm font-medium mb-1">Full Name</label>
+          <label class="block text-sm font-medium mb-0">Full Name</label>
           <input type="text" name="name" required class="w-full border border-gray-300 rounded p-2" />
         </div>
         <div>
           <label class="block text-sm font-medium mb-1">Email</label>
           <input type="email" name="email" required class="w-full border border-gray-300 rounded p-2" />
+        </div>
+        <div>
+          <label class="block text-sm font-medium mb-1">Card Number</label>
+          <input type="text" name="card-number" maxlength="19" placeholder="0000 0000 0000 0000" required class="w-full border border-gray-300 rounded p-2" />
+        </div>
+        <div class="flex space-x-4">
+          <div class="flex-1">
+            <label class="block text-sm font-medium mb-1">Expiry Date</label>
+            <input type="text" name="expiry" placeholder="MM/YY" required class="w-full border border-gray-300 rounded p-2" />
+          </div>
+          <div class="flex-1">
+            <label class="block text-sm font-medium mb-1">CVV</label>
+            <input type="text" name="cvv" maxlength="4" required class="w-full border border-gray-300 rounded p-2" />
+          </div>
         </div>
         <div>
           <label class="block text-sm font-medium mb-1">Donation Amount (₱)</label>
@@ -42,13 +56,13 @@
           <label class="block text-sm font-medium mb-1">Message (Optional)</label>
           <textarea name="message" rows="3" class="w-full border border-gray-300 rounded p-2"></textarea>
         </div>
-        <button type="submit" class="w-full bg-[#7CB342] text-white py-2 px-4 rounded hover:bg-[#689F38]">Submit Donation</button>
+        <button type="submit" class="w-full bg-red-500 text-white py-2 px-4 rounded hover:bg-[#689F38]">Submit Donation</button>
       </form>
     </div>
   </main>
 
   <!-- Footer -->
-  <footer class="bg-green-600 text-white text-center p-4 mt-8">
+  <footer class="bg-green-600 text-white text-center p-4 mt-0">
     <p>Contact us at: <a href="mrs.gapple727@appletree.com" class="underline">mrs.gapple727@appletree.com</a></p>
     <p>&copy; 2025 Project Apple Tree</p>
     <p>Made with <span class="text-red-500">&lt;3</span> by Ivan, Queen and Nikki</p>

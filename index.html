@@ -55,42 +55,30 @@
       </p>
     </div>
     <div class="flex justify-center">
-      <img src="retriever.jpg" alt="Introduction Visual" class="max-w-full h-auto rounded shadow-lg">
+      <img src="retriever.png" alt="Introduction Visual" class="max-w-full h-auto rounded shadow-lg">
     </div>
   </section>
 
   <section id="trust" class="min-h-screen bg-green-900 grid grid-cols-1 md:grid-cols-2 items-center p-12">
     <div class="flex justify-center order-2 md:order-1">
-      <img src="dalmatian.jpg" alt="Trust Visual" class="max-w-full h-auto rounded shadow-lg">
+      <img src="dalmatian.png" alt="Trust Visual" class="max-w-full h-auto rounded shadow-lg">
     </div>
     <div class="text-right space-y-6 order-1 md:order-2">
       <h2 class="text-4xl font-bold text-chalkboard-green">Why Should You Trust Us?</h2>
       <p class="text-lg text-white max-w-prose ml-auto">
         With years of experience in organizing transparent and effective donation drives, we ensure that every peso reaches the right hands. Our team is composed of trusted educators, students, and volunteers dedicated to making a difference.
       </p>
+      <p>Just like Jobart Batumbakal, whose dreams of finishing school were once uncertain, we've helped countless others overcome financial struggles through the generosity of people like you. Every donation tells a story of hope, change, and new beginnings — and Jobart is just one of many lives touched by this mission.</p>
     </div>
   </section>
 
   <!-- Footer -->
   <footer class="bg-green-600 text-center p-4 mt-8">
     <p>Contact us at: <a href="mrs.gapple727@appletree.com" class="underline">mrs.gapple727@appletree.com</a></p>
-    <p>&copy; 2025 School Fundraiser</p>
+    <p>&copy; 2025 Project: Apple Tree</p>
     <p>Made with <span class="text-red-500">&lt;3</span> by Ivan, Queen and Nikki</p>
   </footer>
 
-  <script>
-    const scrollElements = document.querySelectorAll('.scroll-animate');
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.1 });
-
-    scrollElements.forEach(el => observer.observe(el));
-  </script>
 </body>
 
 </html>
